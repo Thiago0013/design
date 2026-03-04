@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Loja - Origema</title>
+</head>
+<body>
+    <header id="main-header">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="criacoes.html">Criações</a></li>
+                <li><a href="sobre.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <img src="images/logo/LogoOrigemaVertical.png" alt="Logo Origema">
+        </div>
+        
+        <nav class="nav-right">
+            <ul>
+                <li><a href="processo.html">Processo</a></li>
+                <li><a href="loja.html" class="active">Loja</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="header-content">
+                <h2>Loja Origema</h2>
+                <p>Leve o design sustentável e a essência nordestina para o seu espaço.</p>
+            </div>
+        </section>
+
+        <section class="store-section">
+            
+            <div class="store-filters">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Mobiliário</button>
+                <button class="filter-btn">Decorativos</button>
+                <button class="filter-btn">Utilitários</button>
+            </div>
+
+            <div class="products-grid">
+                
+                <article class="product-card store-card">
+                    <div class="product-img" style="background-color: var(--laranja-pastel);">
+                        </div>
+                    <div class="product-info">
+                        <span class="tag">Decorativos</span>
+                        <h3>Luminária Raízes</h3>
+                        <p>Madeira de demolição e resíduos industriais reaproveitados.</p>
+                        
+                        <div class="price-action">
+                            <span class="price">R$ 349,90</span>
+                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card store-card">
+                    <div class="product-img" style="background-color: var(--verde-oliva);"></div>
+                    <div class="product-info">
+                        <span class="tag">Mobiliário</span>
+                        <h3>Banco Caruru</h3>
+                        <p>Design orgânico inspirado na flora nordestina.</p>
+                        
+                        <div class="price-action">
+                            <span class="price">R$ 890,00</span>
+                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card store-card">
+                    <div class="product-img" style="background-color: var(--marrom-terroso);"></div>
+                    <div class="product-info">
+                        <span class="tag">Utilitários</span>
+                        <h3>Organizador de Mesa</h3>
+                        <p>Peça minimalista feita com sobras de marcenaria.</p>
+                        
+                        <div class="price-action">
+                            <span class="price">R$ 129,90</span>
+                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="product-card store-card">
+                    <div class="product-img" style="background-color: var(--verde-oliva);"></div>
+                    <div class="product-info">
+                        <span class="tag">Decorativos</span>
+                        <h3>Vaso Origens</h3>
+                        <p>Cerâmica artesanal misturada com fibras naturais.</p>
+                        
+                        <div class="price-action">
+                            <span class="price">R$ 189,00</span>
+                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/logo/LogoOrigemaVertical.png" alt="Origema Logo Menor" class="footer-logo">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p>contato@origema.com</p>
+            <p class="copyright">&copy; 2026 Origema - Design Sustentável & Produtos Criativos.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btnMenu = document.querySelector('.menu-toggle');
+        const header = document.getElementById('main-header');
+        const iconeMenu = btnMenu.querySelector('i');
+
+        btnMenu.addEventListener('click', () => {
+            header.classList.toggle('menu-aberto');
+            if(header.classList.contains('menu-aberto')) {
+                iconeMenu.classList.remove('fa-bars');
+                iconeMenu.classList.add('fa-xmark');
+            } else {
+                iconeMenu.classList.remove('fa-xmark');
+                iconeMenu.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

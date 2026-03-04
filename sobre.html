@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sobre Nós - Origema</title>
+</head>
+<body>
+    <header id="main-header">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="criacoes.html">Criações</a></li>
+                <li><a href="sobre.html" class="active">Sobre nós</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <img src="images/logo/LogoOrigemaVertical.png" alt="Logo Origema">
+        </div>
+        
+        <nav class="nav-right">
+            <ul>
+                <li><a href="processo.html">Processo</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="header-content">
+                <h2>Nossa História e Propósito</h2>
+                <p>Acreditamos que o design não é apenas forma, mas também posicionamento cultural, ambiental e humano.</p>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="history-container">
+                <div class="history-text">
+                    <h3>Como Tudo Começou</h3>
+                    <p>A ORIGEMA foi fundada em 2018 por um grupo de jovens designers recém-formados que compartilhavam a inquietação com o consumo excessivo e o descarte de materiais na indústria do design.</p>
+                    <p>Nosso primeiro produto foi uma linha de luminárias produzidas a partir de madeira de demolição e resíduos industriais. A aceitação do público impulsionou a expansão do nosso portfólio, mantendo sempre o compromisso com processos produtivos responsáveis e parcerias com pequenos produtores e artesãos locais.</p>
+                    <p>Hoje, atuamos no mercado nacional, participando de feiras de design e exposições, mantendo nossa identidade baseada no conceito de origem, essência e propósito.</p>
+                </div>
+                <div class="history-image">
+                    <div class="img-placeholder" style="background-color: var(--verde-oliva);">
+                        <i class="fa-solid fa-seedling" style="font-size: 4rem; color: var(--laranja-pastel);"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mvv-section">
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>Nossa Missão</h4>
+                    <p>Criar produtos de design que respeitem o meio ambiente, valorizem a cultura local e promovam uma relação mais consciente entre pessoas, objetos e natureza.</p>
+                </div>
+                <div class="mvv-card">
+                    <i class="fa-regular fa-eye"></i>
+                    <h4>Nossa Visão</h4>
+                    <p>Ser referência nacional em design sustentável, reconhecida por unir inovação, estética e impacto social positivo.</p>
+                </div>
+                <div class="mvv-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <h4>Nossos Valores</h4>
+                    <ul>
+                        <li>Sustentabilidade e Ética</li>
+                        <li>Valorização do fazer artesanal</li>
+                        <li>Inovação consciente</li>
+                        <li>Respeito às origens culturais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="symbol-section">
+            <div class="symbol-container">
+                <div class="symbol-image">
+                    <img src="images/logo/LogoOrigemaVertical.png" alt="Símbolo Origema - Flor de Caruru">
+                </div>
+                <div class="symbol-text">
+                    <h3>A Flor de Caruru</h3>
+                    <p>A identidade da nossa marca nasceu da busca por elementos botânicos que simbolizassem a vida.</p>
+                    <p>A Flor de Caruru (ou Bredo) é uma planta nativa, resiliente e espontânea, profundamente conectada ao território nordestino. Sua escolha simboliza a beleza que nasce em lugares inesperados, assim como transformamos resíduos e materiais de demolição em design de alto valor.</p>
+                    <p>Toda a composição está inscrita em um arco que remete a uma semente ou janela, direcionando o olhar para o essencial e reforçando nossa filosofia de proteger as origens culturais.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/logo/LogoOrigemaVertical.png" alt="Origema Logo Menor" class="footer-logo">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p>contato@origema.com</p>
+            <p class="copyright">&copy; 2026 Origema - Design Sustentável & Produtos Criativos.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btnMenu = document.querySelector('.menu-toggle');
+        const header = document.getElementById('main-header');
+        const iconeMenu = btnMenu.querySelector('i');
+
+        btnMenu.addEventListener('click', () => {
+            header.classList.toggle('menu-aberto');
+            if(header.classList.contains('menu-aberto')) {
+                iconeMenu.classList.remove('fa-bars');
+                iconeMenu.classList.add('fa-xmark');
+            } else {
+                iconeMenu.classList.remove('fa-xmark');
+                iconeMenu.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

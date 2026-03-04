@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Home - Origema</title>
+</head>
+<body>
+    <header id="main-header">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="criacoes.html">Criações</a></li>
+                <li><a href="sobre.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <img src="images/logo/LogoOrigemaVertical.png" alt="Logo Origema">
+        </div>
+        
+        <nav class="nav-right">
+            <ul>
+                <li><a href="processo.html">Processo</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Design Sustentável & Produtos Criativos</h2>
+                <a href="/criacoes" class="btn-verde">Conheça as Criações</a>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/favicon/favicon.png" alt="Essência da Origema" class="about-photo">
+                </div>
+                <div class="about-text">
+                    <h3>De Onde Vimos:<br>Nossa Essência</h3>
+                    <p>A ORIGEMA é uma marca voltada à criação de produtos de design sustentável, que unem estética contemporânea, funcionalidade e responsabilidade socioambiental.</p>
+                    <p>Fundada por jovens designers em 2018, nascemos da valorização da origem dos materiais, do trabalho artesanal e da relação ética entre design, natureza e sociedade. Acreditamos que o design é posicionamento cultural e humano.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="creations-section">
+            <div class="section-header">
+                <h3>Nossas Criações</h3>
+                <p>Peças únicas feitas com materiais reciclados e reaproveitados.</p>
+            </div>
+            
+            <div class="creations-grid">
+                <div class="creation-card">
+                    <div class="card-img-placeholder" style="background-color: #d1c8b8;"></div>
+                    <h4>Luminárias de Demolição</h4>
+                </div>
+                <div class="creation-card">
+                    <div class="card-img-placeholder" style="background-color: #a8b09f;"></div>
+                    <h4>Mobiliário em Madeira</h4>
+                </div>
+                <div class="creation-card">
+                    <div class="card-img-placeholder" style="background-color: #c4a482;"></div>
+                    <h4>Utilitários Naturais</h4>
+                </div>
+            </div>
+
+            <div class="action-container">
+                <a href="/criacoes" class="btn-marrom">Ver todas as criações</a>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <h3>Nosso Impacto Positivo</h3>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <i class="fa-solid fa-recycle"></i>
+                    <p>Coleta de<br>Materiais</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fa-solid fa-hammer"></i>
+                    <p>Criação<br>Artesanal</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p>Distribuição<br>Consciente</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <p>Economia<br>Criativa</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/logo/LogoOrigemaVertical.png" alt="Origema Logo Menor" class="footer-logo">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p>contato@origema.com</p>
+            <p class="copyright">&copy; 2026 Origema - Design Sustentável & Produtos Criativos.</p>
+        </div>
+    </footer>
+    <script>
+            const btnMenu = document.querySelector('.menu-toggle');
+            const header = document.getElementById('main-header');
+            const iconeMenu = btnMenu.querySelector('i');
+
+            btnMenu.addEventListener('click', () => {
+                // Adiciona ou remove a classe 'menu-aberto'
+            header.classList.toggle('menu-aberto');
+                
+                // Troca o ícone de "tracinhos" (hambúrguer) para o "X" de fechar
+            if(header.classList.contains('menu-aberto')) {
+                iconeMenu.classList.remove('fa-bars');
+                iconeMenu.classList.add('fa-xmark');
+            } else {
+                iconeMenu.classList.remove('fa-xmark');
+                iconeMenu.classList.add('fa-bars');
+            }
+            });
+    </script>
+</body>
+</html>
