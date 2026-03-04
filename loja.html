@@ -47,87 +47,162 @@
         <section class="store-section">
             
             <div class="store-filters">
-                <button class="filter-btn active">Todos</button>
-                <button class="filter-btn">Mobiliário</button>
-                <button class="filter-btn">Decorativos</button>
-                <button class="filter-btn">Utilitários</button>
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="acessorios">Acessórios</button>
+    <button class="filter-btn" data-filter="utilitarios">Utilitários</button>
+    <button class="filter-btn" data-filter="vestuario">Vestuário</button>
+    <button class="filter-btn" data-filter="cosmeticos">Cosméticos</button>
+</div>
+
+<div class="products-grid">
+    <article class="product-card store-card" data-category="acessorios">
+        <div class="product-img">
+            <img src="images/products/bag.png" alt="Sacola de compras Origema">
+        </div>
+        <div class="product-info">
+            <span class="tag">Acessórios</span>
+            <h3>Sacola de Compras</h3>
+            <p>Produzida em papel ecológico resistente e detalhes em fibras naturais.</p>
+            <div class="price-action">
+                <span class="price">R$ 19,90</span>
+                <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
             </div>
+        </div>
+    </article>
 
-            <div class="products-grid">
-                
-                <article class="product-card store-card">
-                    <div class="product-img" style="background-color: var(--laranja-pastel);">
-                        </div>
-                    <div class="product-info">
-                        <span class="tag">Decorativos</span>
-                        <h3>Luminária Raízes</h3>
-                        <p>Madeira de demolição e resíduos industriais reaproveitados.</p>
-                        
-                        <div class="price-action">
-                            <span class="price">R$ 349,90</span>
-                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card store-card">
-                    <div class="product-img" style="background-color: var(--verde-oliva);"></div>
-                    <div class="product-info">
-                        <span class="tag">Mobiliário</span>
-                        <h3>Banco Caruru</h3>
-                        <p>Design orgânico inspirado na flora nordestina.</p>
-                        
-                        <div class="price-action">
-                            <span class="price">R$ 890,00</span>
-                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card store-card">
-                    <div class="product-img" style="background-color: var(--marrom-terroso);"></div>
-                    <div class="product-info">
-                        <span class="tag">Utilitários</span>
-                        <h3>Organizador de Mesa</h3>
-                        <p>Peça minimalista feita com sobras de marcenaria.</p>
-                        
-                        <div class="price-action">
-                            <span class="price">R$ 129,90</span>
-                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
-                        </div>
-                    </div>
-                </article>
-
-                 <article class="product-card store-card">
-                    <div class="product-img" style="background-color: var(--verde-oliva);"></div>
-                    <div class="product-info">
-                        <span class="tag">Decorativos</span>
-                        <h3>Vaso Origens</h3>
-                        <p>Cerâmica artesanal misturada com fibras naturais.</p>
-                        
-                        <div class="price-action">
-                            <span class="price">R$ 189,00</span>
-                            <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
-                        </div>
-                    </div>
-                </article>
-
+    <article class="product-card store-card" data-category="utilitarios">
+        <div class="product-img">
+            <img src="images/products/iphone14.png" alt="Capinha de celular sustentável">
+        </div>
+        <div class="product-info">
+            <span class="tag">Utilitários</span>
+            <h3>Capinha de Celular</h3>
+            <p>Desenvolvida com bioplástico compostável e acabamento inspirado nos tons da terra.</p>
+            <div class="price-action">
+                <span class="price">R$ 89,90</span>
+                <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
             </div>
+        </div>
+    </article>
+
+    <article class="product-card store-card" data-category="vestuario">
+        <div class="product-img">
+            <img src="images/products/simple-t-shirt-mockup.png" alt="Camisa Forte Origema">
+        </div>
+        <div class="product-info">
+            <span class="tag">Vestuário</span>
+            <h3>Camisa Forte</h3>
+            <p>Feita com algodão orgânico e estamparia ecológica. Respeito ao meio ambiente.</p>
+            <div class="price-action">
+                <span class="price">R$ 129,90</span>
+                <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card store-card" data-category="cosmeticos">
+        <div class="product-img">
+            <img src="images/products/cosmetico.png" alt="Creme para pentear Origema">
+        </div>
+        <div class="product-info">
+            <span class="tag">Cosméticos</span>
+            <h3>Creme para Pentear</h3>
+            <p>Fórmula botânica com ativos nordestinos e embalagem 100% reciclável.</p>
+            <div class="price-action">
+                <span class="price">R$ 69,90</span>
+                <a href="#" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i> Comprar</a>
+            </div>
+        </div>
+    </article>
+</div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <img src="images/logo/LogoOrigemaVertical.png" alt="Origema Logo Menor" class="footer-logo">
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+     <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/logo/LogoOrigemaVertical.png" alt="Logo Origema" class="footer-logo">
+                <p>Design sustentável que une estética contemporânea, funcionalidade e responsabilidade socioambiental.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
-            <p>contato@origema.com</p>
-            <p class="copyright">&copy; 2026 Origema - Design Sustentável & Produtos Criativos.</p>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="criacoes.html">Criações</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="processo.html">Processo</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Fale Conosco</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. do Cruzeiro, 1616, Icó-CE</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> (85) 9 0000-0000</li>
+                    <li><i class="fa-solid fa-envelope"></i> origema.contato@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Origema - Design Sustentável & Produtos Criativos. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+    // LÓGICA DO MENU MOBILE (Já existente)
+    const btnMenu = document.querySelector('.menu-toggle');
+    const header = document.getElementById('main-header');
+    const iconeMenu = btnMenu.querySelector('i');
+
+    btnMenu.addEventListener('click', () => {
+        header.classList.toggle('menu-aberto');
+        if(header.classList.contains('menu-aberto')) {
+            iconeMenu.classList.remove('fa-bars');
+            iconeMenu.classList.add('fa-xmark');
+        } else {
+            iconeMenu.classList.remove('fa-xmark');
+            iconeMenu.classList.add('fa-bars');
+        }
+    });
+
+    // LÓGICA DE FILTRO DA LOJA (Nova)
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 1. Remover 'active' de todos e adicionar no clicado
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // 2. Pegar a categoria do filtro
+            const filterValue = button.getAttribute('data-filter');
+
+            // 3. Filtrar os cards
+            productCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || filterValue === cardCategory) {
+                    card.style.display = 'flex'; // Mostra
+                    // Pequeno delay para animação (opcional)
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0'; // Esconde com fade
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        });
+    });
+</script>
 
     <script>
         const btnMenu = document.querySelector('.menu-toggle');

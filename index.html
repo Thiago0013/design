@@ -17,7 +17,7 @@
 
         <nav class="nav-left">
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
                 <li><a href="criacoes.html">Criações</a></li>
                 <li><a href="sobre.html">Sobre nós</a></li>
             </ul>
@@ -37,10 +37,16 @@
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section hero-bg">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
+                <h1>Sustentabilidade em cada detalhe</h1>
                 <h2>Design Sustentável & Produtos Criativos</h2>
-                <a href="/criacoes" class="btn-verde">Conheça as Criações</a>
+                <p>Descubra peças únicas feitas com materiais reciclados, valorizando a cultura e o fazer artesanal nordestino.</p>
+                <div class="hero-buttons">
+                    <a href="criacoes.html" class="btn-verde">Conheça as Criações</a>
+                    <a href="processo.html" class="btn-outline-claro">Nosso Processo</a>
+                </div>
             </div>
         </section>
 
@@ -65,21 +71,32 @@
             
             <div class="creations-grid">
                 <div class="creation-card">
-                    <div class="card-img-placeholder" style="background-color: #d1c8b8;"></div>
-                    <h4>Luminárias de Demolição</h4>
+                    <img src="images/products/CADERNO.png" alt="Caderno" class="card-img">
+                    <h4>Caderno</h4>
                 </div>
+                
                 <div class="creation-card">
-                    <div class="card-img-placeholder" style="background-color: #a8b09f;"></div>
-                    <h4>Mobiliário em Madeira</h4>
+                    <img src="images/products/simple-t-shirt-mockup.png" alt="Camisa" class="card-img">
+                    <h4>Camisa</h4>
                 </div>
+                
                 <div class="creation-card">
-                    <div class="card-img-placeholder" style="background-color: #c4a482;"></div>
-                    <h4>Utilitários Naturais</h4>
+                    <img src="images/products/iphone14.png" alt="Capinhas de celulares naturais" class="card-img">
+                    <h4>Capinhas Naturais</h4>
                 </div>
             </div>
 
             <div class="action-container">
-                <a href="/criacoes" class="btn-marrom">Ver todas as criações</a>
+                <a href="criacoes.html" class="btn-marrom">Ver todas as criações</a>
+            </div>
+        </section>
+
+        <section class="manifesto-section">
+            <div class="manifesto-content">
+                <i class="fa-solid fa-seedling"></i>
+                <h3>A beleza que nasce em lugares inesperados</h3>
+                <p>Inspirados pela Flor de Caruru, transformamos resíduos e materiais de demolição em design de alto valor. Nosso compromisso é com a estética, a funcionalidade e o impacto social positivo.</p>
+                <a href="sobre.html" class="btn-outline-escuro">Conheça nossa história</a>
             </div>
         </section>
 
@@ -107,27 +124,51 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <img src="images/logo/LogoOrigemaVertical.png" alt="Origema Logo Menor" class="footer-logo">
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/logo/LogoOrigemaVertical.png" alt="Logo Origema" class="footer-logo">
+                <p>Design sustentável que une estética contemporânea, funcionalidade e responsabilidade socioambiental.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
-            <p>contato@origema.com</p>
-            <p class="copyright">&copy; 2026 Origema - Design Sustentável & Produtos Criativos.</p>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="criacoes.html">Criações</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="processo.html">Processo</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Fale Conosco</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. do Cruzeiro, 1616, Icó-CE</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> (85) 9 0000-0000</li>
+                    <li><i class="fa-solid fa-envelope"></i> origema.contato@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Origema - Design Sustentável & Produtos Criativos. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script>
-            const btnMenu = document.querySelector('.menu-toggle');
-            const header = document.getElementById('main-header');
-            const iconeMenu = btnMenu.querySelector('i');
 
-            btnMenu.addEventListener('click', () => {
-                // Adiciona ou remove a classe 'menu-aberto'
+    <script>
+        const btnMenu = document.querySelector('.menu-toggle');
+        const header = document.getElementById('main-header');
+        const iconeMenu = btnMenu.querySelector('i');
+
+        btnMenu.addEventListener('click', () => {
             header.classList.toggle('menu-aberto');
-                
-                // Troca o ícone de "tracinhos" (hambúrguer) para o "X" de fechar
             if(header.classList.contains('menu-aberto')) {
                 iconeMenu.classList.remove('fa-bars');
                 iconeMenu.classList.add('fa-xmark');
@@ -135,7 +176,7 @@
                 iconeMenu.classList.remove('fa-xmark');
                 iconeMenu.classList.add('fa-bars');
             }
-            });
+        });
     </script>
 </body>
 </html>

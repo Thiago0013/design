@@ -56,7 +56,7 @@
                             <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <div class="info-text">
                                 <strong>Nosso Estúdio</strong>
-                                <span>Av. da Criação, 1666 - Acopiara, CE</span>
+                                <span>Av. do Cruzeiro, 1616, Icó-CE</span>
                             </div>
                         </li>
                         <li>
@@ -86,31 +86,31 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form action="#" class="contact-form">
+                    <form id="form-contato" class="contact-form">
                         <div class="input-group">
                             <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" placeholder="Como devemos chamar você?" required>
+                            <input type="text" id="nome" name="nome" placeholder="Como devemos chamar você?" required>
                         </div>
                         
                         <div class="input-group">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="seu@email.com" required>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                         </div>
                         
                         <div class="input-group">
                             <label for="assunto">Assunto</label>
-                            <select id="assunto" required>
+                            <select id="assunto" name="assunto" required>
                                 <option value="" disabled selected>Escolha uma opção</option>
-                                <option value="duvida">Dúvida sobre produto</option>
-                                <option value="encomenda">Encomenda personalizada</option>
-                                <option value="parceria">Parcerias e B2B</option>
-                                <option value="outros">Outros</option>
+                                <option value="Dúvida sobre produto">Dúvida sobre produto</option>
+                                <option value="Encomenda personalizada">Encomenda personalizada</option>
+                                <option value="Parcerias e B2B">Parcerias e B2B</option>
+                                <option value="Outros">Outros</option>
                             </select>
                         </div>
                         
                         <div class="input-group">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
                         </div>
                         
                         <button type="submit" class="btn-enviar">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
@@ -122,17 +122,88 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <img src="images/logo/LogoOrigemaVertical.png" alt="Origema Logo Menor" class="footer-logo">
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/logo/LogoOrigemaVertical.png" alt="Logo Origema" class="footer-logo">
+                <p>Design sustentável que une estética contemporânea, funcionalidade e responsabilidade socioambiental.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
-            <p>origema.contato@gmail.com</p>
-            <p class="copyright">&copy; 2026 Origema - Design Sustentável & Produtos Criativos.</p>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="criacoes.html">Criações</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="processo.html">Processo</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Fale Conosco</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. do Cruzeiro, 1616, Icó-CE</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> (85) 9 0000-0000</li>
+                    <li><i class="fa-solid fa-envelope"></i> origema.contato@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Origema - Design Sustentável & Produtos Criativos. Todos os direitos reservados.</p>
         </div>
     </footer>
+   <script>
+        // SCRIPT DO FORMULÁRIO DE CONTATO
+        const formContato = document.getElementById('form-contato');
+        const btnEnviar = document.querySelector('.btn-enviar');
+
+        formContato.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o site de recarregar a página
+
+            // Pega o nome para usar no alerta
+            const nomeCliente = document.getElementById('nome').value;
+
+            // Muda o texto do botão para mostrar que está carregando
+            const textoOriginal = btnEnviar.innerHTML;
+            btnEnviar.innerHTML = 'Enviando... <i class="fa-solid fa-spinner fa-spin"></i>';
+            btnEnviar.disabled = true;
+            btnEnviar.style.opacity = '0.7';
+
+            // O TRUQUE: Empacotar os dados num formato que o Google aceita nativamente
+            const data = new URLSearchParams(new FormData(formContato));
+            
+            // COLE A SUA URL DO GOOGLE APPS SCRIPT AQUI:
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzlHPWrZeoRLRecbortpLCXGNrR-uCpjjB-5Fcbm1dlQp8E47shTZ68nLYXTzYld3D0/exec';
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: data 
+            })
+            .then(response => {
+                alert(`Olá ${nomeCliente}, recebemos sua mensagem! Verifique seu e-mail.`);
+                
+                // Limpa o formulário e volta o botão ao normal
+                formContato.reset();
+                btnEnviar.innerHTML = textoOriginal;
+                btnEnviar.disabled = false;
+                btnEnviar.style.opacity = '1';
+            })
+            .catch(error => {
+                console.error('Erro no envio:', error);
+                alert('Houve um erro ao enviar a mensagem. Tente novamente mais tarde.');
+                btnEnviar.innerHTML = textoOriginal;
+                btnEnviar.disabled = false;
+                btnEnviar.style.opacity = '1';
+            });
+        });
+    </script>
 
     <script>
         const btnMenu = document.querySelector('.menu-toggle');

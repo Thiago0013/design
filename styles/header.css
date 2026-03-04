@@ -4,7 +4,7 @@ header {
     justify-content: center;
     gap: 4rem; /* Aumenta o espaço entre os links e a logo central */
     background-color: #000000; /* Preto oficial da marca */
-    height: 120px; /* Altura mais equilibrada */
+    height: 150px; /* Altura mais equilibrada */
     position: relative;
     z-index: 100; /* Garante que o header fique por cima do resto do conteúdo */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
